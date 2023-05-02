@@ -1,0 +1,22 @@
+<!-- NAV -->
+<div class="border-b  h-20">
+    <div class="flex flex-row max-w-screen-xl px-20 xl:px-0 mx-auto items-center  h-full ">
+
+        <!-- Logo-->
+        <img class="h-12" src="http://www.aeptic.es/wp-content/uploads/2015/11/AePTIC-logo-xxl2.png" alt="">
+        
+        <!-- Enlaces-->
+        <div class="md:flex flex-row justify-end items-center flex-end w-full h-full hidden">
+            <a *ngFor="let link of links" [href]="link.url"  class="h-full">
+                <button class="text-slate-700 px-4 h-full hover:bg-slate-100">{{link.text}}</button>
+            </a>
+
+            <input placeholder="Buscar..." *ngIf="buscadorActivo" class="bg-slate-100 h-full px-6" type="text">
+
+            <button (click)="btnBuscar()" class="hover:bg-slate-100 h-full w-16">
+                <i class="bi bi-search  flex items-center justify-center"></i>
+            </button>
+        </div>
+    
+    </div>
+</div>
